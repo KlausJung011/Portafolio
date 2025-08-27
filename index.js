@@ -1,4 +1,3 @@
-// Create floating particles animation
 function createParticles() {
     const particleCount = 100;
     const body = document.body;
