@@ -3,262 +3,686 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Profesional</title>
+    <meta name="description" content="Portafolio profesional de Nicolás Vargas Silva — Desarrollador de Software en formación, Sucre, Bolivia.">
+    <title>Nicolás Vargas Silva | Portafolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Devicons para íconos de tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
-    <!-- Fondo con partículas -->
-    <div class="bg-animation"></div>
-    
-    <div class="container">
-        <!-- Info personal -->
-        <header class="header">
-            <div class="profile-img">
-                <!-- <i class="fas fa-user"></i> -->
-                <img src="img/perfil.gif" height="140" alt="Arte Digital">
-            </div>
-            <h1 class="name">Hola, soy Nicolás Arturo Vargas Silva</h1>
-            <p class="title">Programador en desarrollo</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>nico.nsavs@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+591 78666971</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Sucre, Bolivia</span>
-                </div>
-            </div>
-        </header>
 
-        <!-- Redes sociales -->
-        <section class="social-section">
-            <h2 class="section-title">
-                <i class="fas fa-share-alt"></i>
-                Mis Redes Sociales
-            </h2>
-            <div class="social-links">
-                <a href="https://github.com/KlausJung011" class="social-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/nicol%C3%A1s-arturo-vargas-silva-749306187?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/klausjung.011?igsh=NHFzeXE3M2k2eWxt" class="social-link" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+    <!-- Fondo animado -->
+    <div class="bg-canvas" id="bgCanvas"></div>
+
+    <!-- ═══════════════════════════════════════ HEADER ══════════════════════════════════════ -->
+    <header class="header glass-gradient-border" id="header">
+        <div class="header-inner">
+            <!-- Foto de perfil -->
+            <div class="profile-wrapper">
+                <div class="profile-img-ring">
+                    <img src="img/perfil.gif" alt="Foto de perfil de Nicolás Vargas" class="profile-img">
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Disponible para proyectos
+                </div>
+            </div>
+
+            <!-- Info principal -->
+            <div class="header-info">
+                <p class="header-greeting">Hola, soy</p>
+                <h1 class="name gradient-text">Nicolás Arturo<br>Vargas Silva</h1>
+                <p class="title">Desarrollador de Software en Formación</p>
+
+                <!-- Contacto -->
+                <div class="contact-row">
+                    <a href="mailto:nico.nsavs@gmail.com" class="contact-chip" title="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span>nico.nsavs@gmail.com</span>
+                    </a>
+                    <a href="tel:+59178666971" class="contact-chip" title="Teléfono">
+                        <i class="fas fa-phone"></i>
+                        <span>+591 78666971</span>
+                    </a>
+                    <div class="contact-chip">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Sucre, Bolivia</span>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="social-row">
+                    <a href="https://github.com/KlausJung011" class="social-btn" title="GitHub" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-arturo-vargas-silva-749306187" class="social-btn" title="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/klausjung.011" class="social-btn" title="Instagram" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="Curriculum_NAVS.pdf" class="social-btn btn-cv" title="Descargar CV" target="_blank" download>
+                        <i class="fas fa-file-arrow-down"></i>
+                        <span>Descargar CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════ NAV ══════════════════════════════════════ -->
+    <nav class="sticky-nav" id="stickyNav">
+        <div class="nav-inner">
+            <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+            <a href="#intereses" class="nav-link">Intereses</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#idiomas" class="nav-link">Idiomas</a>
+            <a href="#blandas" class="nav-link">Soft Skills</a>
+            <a href="#educacion" class="nav-link">Educación</a>
+            <a href="#experiencia" class="nav-link">Experiencia</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ MAIN ══════════════════════════════════════ -->
+    <main class="main-wrapper">
+
+        <!-- ── SOBRE MÍ ── -->
+        <section class="section glass-card reveal" id="sobre-mi">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-user-astronaut"></i></span>
+                <h2 class="section-title gradient-text">Sobre mí</h2>
+            </div>
+            <div class="about-grid">
+                <p class="about-text">
+                    Soy un desarrollador de software apasionado por crear soluciones digitales elegantes y funcionales.
+                    Actualmente estudio <strong>Ingeniería en Sistemas Informáticos</strong> en la Universidad del Valle (6.º semestre),
+                    y combino mi formación académica con aprendizaje autodidacta y experiencia práctica al desarrollar proyectos de todo tipo.
+                </p>
+                <p class="about-text">
+                    Me motiva descubrir nuevas tecnologías constantemente, aprender sobre nuevas soluciones, enfrentar retos técnicos complejos y aportar valor real a través del código.
+                    Tengo experiencia previa en <strong>Ingeniería Electromecánica</strong>, lo que me da la habilidad de prestar atención a los detalles y
+                    tener una perspectiva multidisciplinaria única para abordar los problemas de software.
+                </p>
+                <div class="about-stats">
+                    <!--<div class="stat-chip">
+                        <span class="stat-number">0 (pero con muchas ganas de aprender)</span>
+                        <span class="stat-label">Años de experiencia como desarrollador</span>
+                    </div>-->
+                    <div class="stat-chip">
+                        <span class="stat-number">6.º</span>
+                        <span class="stat-label">Semestre en curso</span>
+                    </div>
+                    <div class="stat-chip">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Tecnologías</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="main-content">
-            <!-- Objetivo / resumen -->
-            <section class="section full-width">
-                <h2 class="section-title">
-                    <i class="fas fa-bullseye"></i>
-                    Objetivo Profesional
-                </h2>
-                <div class="section-content">
-                    <p>Profesional muy motivado por aprender sobre el desarrollo de 
-                        aplicaciones web y de escritorio, buscando oportunidades para 
-                        contribuir al crecimiento de proyectos innovadores. Mi objetivo 
-                        es aplicar mis conocimientos técnicos y creativos para crear soluciones 
-                        digitales y automatizaciones que impacten positivamente en la sociedad.</p>
+        <!-- ── INTERESES ── -->
+        <section class="section glass-card reveal" id="intereses">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-compass"></i></span>
+                <h2 class="section-title gradient-text">Mis Intereses</h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Crear soluciones web modernas y responsivas con tecnologías actuales.</p>
                 </div>
-            </section>
-
-            <!-- Experiencia -->
-            <section class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-briefcase"></i>
-                    Experiencia Laboral
-                </h2>
-                <div class="section-content">
-                    <div class="timeline-item">
-                        <div class="timeline-title">Desarrollador WPF</div>
-                        <div class="timeline-company">Empresa KND</div>
-                        <div class="timeline-date">Agosto 2022 - Presente</div>
-                        <p>Desarrollo de aplicaciones de escritorio utilizando C#, WPF (.NET Framework) y SQL Server. En un equipo de 3 desarrolladores junior.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Desarrollador Junior Full Stack</div>
-                        <div class="timeline-company">Univalle</div>
-                        <div class="timeline-date">Febrero 2025 - Presente</div>
-                        <p>Desarrollo de aplicaciones web responsivas utilizando React y Python (FastAPI). En un equipo de 3 desarrolladores junior.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Análisis de datos</div>
-                        <div class="timeline-company">Startup de alto crecimiento X</div>
-                        <div class="timeline-date">Enero 2028 - Futuro</div>
-                        <p>Desarrollo de aplicaciones web responsivas utilizando SQL, Python y MongoDB. Liderazgo de equipo de 5 desarrolladores junior.</p>
-                    </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Inteligencia Artificial</h3>
+                    <p>Explorar machine learning y automatización inteligente de procesos con agentes de IA.</p>
                 </div>
-            </section>
-
-            <!-- Educación -->
-            <section class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-graduation-cap"></i>
-                    Educación
-                </h2>
-                <div class="section-content">
-                    <div class="timeline-item">
-                        <div class="timeline-title">Ingeniería Electromecánica</div>
-                        <div class="timeline-company">Universidad de San Francisco Xavier</div>
-                        <div class="timeline-date">2017 - 2022</div>
-                        <p>Licenciatura en Ingeniería Electromecánica.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">PROGRAMA EXPERTO EN ROS</div>
-                        <div class="timeline-company">Unifranz</div>
-                        <div class="timeline-date">2023</div>
-                        <p>Diplomado en Sistema Operativo Robótico.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Ingeniería en Sistemas Informáticos</div>
-                        <div class="timeline-company">Universidad del Valle</div>
-                        <div class="timeline-date">2024 - Presente</div>
-                        <p>Licenciatura en Ingeniería de Sistemas Informáticos.</p>
-                    </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>CivicTech & GovTech</h3>
+                    <p>Tecnologías aplicadas a la política y la democracia digital: participación ciudadana, transparencia y toma de decisiones colectivas.</p>
                 </div>
-            </section>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Tecnologías en la Nube</h3>
+                    <p>Alojamiento de aplicaciones y servicios web: servidores VPS, Docker, máquinas virtuales y plataformas cloud.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Datos & Análisis</h3>
+                    <p>Recopilación, procesamiento y análisis de datos para extraer insights valiosos con herramientas como SQL, Python y visualización.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-gears"></i></div>
+                    <h3>Robótica</h3>
+                    <p>Diseño y programación de sistemas robóticos autónomos con ROS, sensores y algoritmos de navegación.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-coins"></i></div>
+                    <h3>FinTech & Criptomonedas</h3>
+                    <p>Tecnología aplicada a las finanzas: sistemas de pago digitales, blockchain y mercados de activos cripto.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-pen-ruler"></i></div>
+                    <h3>Diseño UI/UX</h3>
+                    <p>Diseño de interfaces modernas y accesibles orientadas al usuario, hasta estilos más creativos e inusuales si se requiere.</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- Habilidades -->
-            <section class="section full-width">
-                <h2 class="section-title">
-                    <i class="fas fa-cogs"></i>
-                    Habilidades Técnicas
-                </h2>
-                <div class="section-content">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Frontend</h4>
-                            <span class="skill-item">HTML5</span>
-                            <span class="skill-item">CSS3</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">React</span>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>Backend</h4>
-                            <span class="skill-item">Node.js</span>
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">FastAPI</span>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>Base de Datos</h4>
-                            <span class="skill-item">SQL Server</span>
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">MySQL</span>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>Móvil</h4>
-                            <span class="skill-item">Java</span>
-                            <span class="skill-item">Kotlin</span>
-                        </div>
+        <!-- ── HABILIDADES TÉCNICAS ── -->
+        <section class="section glass-card reveal" id="habilidades">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-code"></i></span>
+                <h2 class="section-title gradient-text">Habilidades Técnicas</h2>
+            </div>
 
-                        <div class="skill-category">
-                            <h4>Diseño</h4>
-                            <span class="skill-item">Figma</span>
-                            <span class="skill-item">Inventor</span>
-                            <span class="skill-item">Autocad</span>
-                        </div>
+            <!-- Badges de tecnologías -->
+            <div class="tech-categories">
+
+                <div class="tech-group">
+                    <h3 class="tech-group-title"><i class="fas fa-layer-group"></i> Frontend</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                        <span class="tech-badge"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                        <span class="tech-badge"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                        <span class="tech-badge"><i class="devicon-react-original colored"></i> React</span>
+                        <span class="tech-badge"><i class="devicon-nextjs-plain colored"></i> Next.js</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Certificaciones y cursitos -->
-            <section class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-certificate"></i>
-                    Certificaciones y Cursos
-                </h2>
-                <div class="section-content">
-                    <div class="timeline-item">
-                        <div class="timeline-title">Programación de PLCs</div>
-                        <div class="timeline-company">USFX</div>
-                        <div class="timeline-date">2019</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Especialización en Inventor</div>
-                        <div class="timeline-company">Capsoft - Autodesk</div>
-                        <div class="timeline-date">2020</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Program with Python</div>
-                        <div class="timeline-company">Coursera - UMich</div>
-                        <div class="timeline-date">2021</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Python Fundamentals</div>
-                        <div class="timeline-company">Cisco</div>
-                        <div class="timeline-date">2024</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-title">Oracle Database Design</div>
-                        <div class="timeline-company">Oracle Academy</div>
-                        <div class="timeline-date">2025</div>
+                <div class="tech-group">
+                    <h3 class="tech-group-title"><i class="fas fa-server"></i> Backend</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge"><i class="devicon-python-plain colored"></i> Python</span>
+                        <span class="tech-badge"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                        <span class="tech-badge"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                        <span class="tech-badge"><i class="devicon-csharp-plain colored"></i> C#</span>
+                        <span class="tech-badge"><i class="devicon-nestjs-plain colored"></i> Nest.js</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Idiomas -->
-            <section class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-language"></i>
-                    Idiomas
-                </h2>
-                <div class="section-content">
-                    <div class="language-item">
-                        <span>Español</span>
-                        <span class="language-level">Nativo</span>
-                    </div>
-                    
-                    <div class="language-item">
-                        <span>Inglés</span>
-                        <span class="language-level">Avanzado (B2)</span>
-                    </div>
-                    
-                    <div class="language-item">
-                        <span>Alemán</span>
-                        <span class="language-level">Ya quisiera</span>
+                <div class="tech-group">
+                    <h3 class="tech-group-title"><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge"><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</span>
+                        <span class="tech-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                        <span class="tech-badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                        <span class="tech-badge"><i class="devicon-firebase-plain colored"></i> Firebase</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Referencias -->
-            <section class="section full-width">
-                <h2 class="section-title">
-                    <i class="fas fa-users"></i>
-                    Referencias Profesionales
-                </h2>
-                <div class="section-content">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                        <div class="timeline-item">
-                            <div class="timeline-title">Ing. Misael Condo Rodriguez</div>
-                            <div class="timeline-company">Docente y DevOps</div>
-                            <p><i class="fas fa-envelope"></i> mcondor@univalle.edu</p>
-                            <p><i class="fas fa-phone"></i> +591 73421635</p>
+                <div class="tech-group">
+                    <h3 class="tech-group-title"><i class="fas fa-mobile-screen"></i> Móvil & Desktop</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge"><i class="devicon-java-plain colored"></i> Java</span>
+                        <span class="tech-badge"><i class="devicon-kotlin-plain colored"></i> Kotlin</span>
+                        <span class="tech-badge"><i class="devicon-dot-net-plain colored"></i> WPF .NET</span>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h3 class="tech-group-title"><i class="fas fa-tools"></i> Herramientas</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge"><i class="devicon-git-plain colored"></i> Git</span>
+                        <span class="tech-badge"><i class="devicon-github-original colored"></i> GitHub</span>
+                        <span class="tech-badge"><i class="devicon-figma-plain colored"></i> Figma</span>
+                        <span class="tech-badge"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                        <span class="tech-badge"><i class="devicon-unity-plain colored"></i> Unity</span>
+                        <span class="tech-badge"><i class="devicon-autocad-plain colored"></i> Inventor</span>
+                        <span class="tech-badge"><i class="fas fa-drafting-compass"></i> Autocad</span>
+                        <span class="tech-badge"><i class="fas fa-cubes"></i> Impresión 3D</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Barras de progreso -->
+            <div class="skills-bars-title"><i class="fas fa-chart-bar"></i> Nivel de dominio</div>
+            <div class="skills-bars">
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>Python</span>
+                        <span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="80" style="--bar-color: linear-gradient(90deg, #3776ab, #ffd43b)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>JavaScript / React</span>
+                        <span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="70" style="--bar-color: linear-gradient(90deg, #f0db4f, #61dafb)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>C# / WPF</span>
+                        <span class="skill-pct">75%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="75" style="--bar-color: linear-gradient(90deg, #9b59b6, #2ecc71)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>HTML / CSS</span>
+                        <span class="skill-pct">85%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="85" style="--bar-color: linear-gradient(90deg, #e34c26, #264de4)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>SQL / Bases de datos</span>
+                        <span class="skill-pct">72%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="72" style="--bar-color: linear-gradient(90deg, #00758f, #f29111)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>Java / Kotlin (Android)</span>
+                        <span class="skill-pct">60%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="60" style="--bar-color: linear-gradient(90deg, #b07219, #7F52FF)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>Next.js</span>
+                        <span class="skill-pct">30%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="30" style="--bar-color: linear-gradient(90deg, #ffffff, #888888)"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>Nest.js</span>
+                        <span class="skill-pct">30%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" data-width="30" style="--bar-color: linear-gradient(90deg, #ea2845, #ff6b6b)"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── IDIOMAS ── -->
+        <section class="section glass-card reveal" id="idiomas">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-language"></i></span>
+                <h2 class="section-title gradient-text">Idiomas</h2>
+            </div>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <div class="lang-flag">🇧🇴</div>
+                    <h3 class="lang-name">Español</h3>
+                    <div class="lang-level-bar">
+                        <div class="lang-level-fill" data-width="100" style="--bar-color: linear-gradient(90deg, #FF6B6B, #FF8437)"></div>
+                    </div>
+                    <span class="lang-badge native">Nativo</span>
+                    <p class="lang-desc">Lengua materna. Comunicación oral y escrita perfecta en contextos formales e informales.</p>
+                </div>
+                <div class="language-card">
+                    <div class="lang-flag">🇬🇧</div>
+                    <h3 class="lang-name">Inglés</h3>
+                    <div class="lang-level-bar">
+                        <div class="lang-level-fill" data-width="70" style="--bar-color: linear-gradient(90deg, #4A90D9, #00C6FF)"></div>
+                    </div>
+                    <span class="lang-badge b2">B2 — Upper Intermediate</span>
+                    <p class="lang-desc">Lectura técnica fluida, comunicación escrita efectiva y comprensión auditiva en entornos profesionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── HABILIDADES BLANDAS ── -->
+        <section class="section glass-card reveal" id="blandas">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-heart-pulse"></i></span>
+                <h2 class="section-title gradient-text">Habilidades Blandas</h2>
+            </div>
+            <div class="soft-skills-grid">
+                <div class="soft-skill-card">
+                    <div class="soft-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Pensamiento crítico</h3>
+                    <p>Análisis profundo de problemas para encontrar soluciones efectivas y bien fundamentadas.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <div class="soft-icon"><i class="fas fa-people-group"></i></div>
+                    <h3>Trabajo en equipo</h3>
+                    <p>Experiencia colaborando en equipos de desarrollo ágil, aportando y aprendiendo en grupo.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <div class="soft-icon"><i class="fas fa-clock-rotate-left"></i></div>
+                    <h3>Gestión del tiempo</h3>
+                    <p>Organización eficiente de tareas para cumplir plazos sin sacrificar calidad.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <div class="soft-icon"><i class="fas fa-arrows-rotate"></i></div>
+                    <h3>Adaptabilidad</h3>
+                    <p>Capacidad para aprender rápidamente nuevas tecnologías y adaptarse a distintos contextos.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <div class="soft-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Comunicación efectiva</h3>
+                    <p>Expresión clara de ideas técnicas y no técnicas tanto oral como por escrito.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <div class="soft-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Aprendizaje continuo</h3>
+                    <p>Iniciativa propia para mantenerse actualizado y ampliar constantemente mis conocimientos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── EDUCACIÓN ── -->
+        <section class="section glass-card reveal" id="educacion">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-graduation-cap"></i></span>
+                <h2 class="section-title gradient-text">Educación</h2>
+            </div>
+
+            <!-- Sub-sección: Carrera y cursos principales -->
+            <div class="edu-subsection">
+                <h3 class="edu-subsection-title">
+                    <i class="fas fa-university"></i> Formación Académica & Diplomados
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-inner">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Ingeniería en Sistemas Informáticos</div>
+                                    <div class="tl-company"><i class="fas fa-building-columns"></i> Universidad del Valle — Sucre, Bolivia</div>
+                                </div>
+                                <span class="tl-date">2024 — Presente</span>
+                            </div>
+                            <p>Licenciatura en ingeniería orientada al desarrollo de software, bases de datos, redes y sistemas distribuidos. Actualmente en el 6.º semestre.</p>
+                            <div class="tl-tags">
+                                <span>Sistemas</span><span>Software</span><span>En curso</span>
+                            </div>
                         </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-title">Sociedad Científica de Sistemas Informáticos de Univalle</div>
-                            <div class="timeline-company"></div>
-                            <p><i class="fas fa-envelope"></i> Univalle Sucre</p>
-                            <p><i class="fas fa-phone"></i></p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-inner">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Diplomado — Experto en ROS</div>
+                                    <div class="tl-company"><i class="fas fa-building-columns"></i> Unifranz</div>
+                                </div>
+                                <span class="tl-date">2023</span>
+                            </div>
+                            <p>Programa especializado en Robot Operating System (ROS) para desarrollo y control de sistemas robóticos autónomos.</p>
+                            <div class="tl-tags">
+                                <span>Robótica</span><span>ROS</span><span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-inner">
+                            <div class="tl-header">
+                                <div>
+                                    <div class="tl-title">Ingeniería Electromecánica</div>
+                                    <div class="tl-company"><i class="fas fa-building-columns"></i> Universidad San Francisco Xavier — Sucre, Bolivia</div>
+                                </div>
+                                <span class="tl-date">2017 — 2022</span>
+                            </div>
+                            <p>Licenciatura en Ingeniería Electromecánica. Formación en sistemas eléctricos, automatización industrial y programación de PLCs.</p>
+                            <div class="tl-tags">
+                                <span>Electromecánica</span><span>Automatización</span><span>PLCs</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Sub-sección: Cursitos cortos -->
+            <div class="edu-subsection">
+                <h3 class="edu-subsection-title">
+                    <i class="fas fa-certificate"></i> Certificaciones & Cursos Cortos
+                </h3>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fas fa-database"></i></div>
+                        <div class="course-info">
+                            <div class="course-title">Oracle Database Design</div>
+                            <div class="course-provider">Oracle Academy</div>
+                            <span class="course-year">2025</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fab fa-python"></i></div>
+                        <div class="course-info">
+                            <div class="course-title">Python Fundamentals</div>
+                            <div class="course-provider">Cisco Networking Academy</div>
+                            <span class="course-year">2024</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fas fa-code"></i></div>
+                        <div class="course-info">
+                            <div class="course-title">Programming with Python</div>
+                            <div class="course-provider">Coursera — University of Michigan</div>
+                            <span class="course-year">2021</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <div class="course-info">
+                            <div class="course-title">Especialización en Inventor</div>
+                            <div class="course-provider">Capsoft — Autodesk</div>
+                            <span class="course-year">2020</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="course-info">
+                            <div class="course-title">Programación de PLCs</div>
+                            <div class="course-provider">USFX</div>
+                            <span class="course-year">2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── EXPERIENCIA LABORAL ── -->
+        <section class="section glass-card reveal" id="experiencia">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-briefcase"></i></span>
+                <h2 class="section-title gradient-text">Experiencia Laboral</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content glass-inner">
+                        <div class="tl-header">
+                            <div>
+                                <div class="tl-title">Desarrollador — Agente de IA para Ventas Conversacionales</div>
+                                <div class="tl-company"><i class="fas fa-building"></i> Importadora de Productos de Salud Japoneses</div>
+                            </div>
+                            <span class="tl-date">2025</span>
+                        </div>
+                        <p>Diseño e implementación de un agente de IA autónomo para la automatización de ventas conversacionales por WhatsApp. El agente gestiona consultas, cotizaciones y seguimiento de clientes en tiempo real mediante flujos de trabajo de automatización.</p>
+                        <div class="tl-tags">
+                            <span>N8N</span><span>Supabase</span><span>IA Conversacional</span><span>WhatsApp API</span><span>Automatización</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content glass-inner">
+                        <div class="tl-header">
+                            <div>
+                                <div class="tl-title">Desarrollador — Sistema de Gestión Escolar</div>
+                                <div class="tl-company"><i class="fas fa-building"></i> Proyecto para colegios de Santa Cruz</div>
+                            </div>
+                            <span class="tl-date tl-current">2026 — Presente</span>
+                        </div>
+                        <p>Desarrollo de una plataforma web de gestión escolar orientada a múltiples colegios de Santa Cruz. El sistema centraliza la administración académica, asistencia y comunicación entre docentes, estudiantes y personal. Proyecto realizado en colaboración con un profesor de la ciudad.</p>
+                        <div class="tl-tags">
+                            <span>Next.js</span><span>PostgreSQL</span><span>En desarrollo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PROYECTOS ── -->
+        <section class="section glass-card reveal" id="proyectos">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-rocket"></i></span>
+                <h2 class="section-title gradient-text">Proyectos</h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Sistema de Gestión Escolar -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-school"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/KlausJung011" title="Ver repositorio" class="proj-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-status in-dev"><i class="fas fa-circle-notch fa-spin"></i> En desarrollo</div>
+                    <h3 class="project-title">Sistema de Gestión Escolar</h3>
+                    <p class="project-desc">Plataforma web para la gestión académica de múltiples colegios. Centraliza calificaciones, asistencia, comunicación docente-estudiante y administración institucional. Desarrollado en colaboración con un docente de Santa Cruz.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span><span>PostgreSQL</span><span>Multi-tenant</span>
+                    </div>
+                </div>
+
+                <!-- Sistema Restaurante Multiplataforma -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-utensils"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/KlausJung011" title="Ver repositorio" class="proj-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Sistema Multiplataforma de Restaurante</h3>
+                    <p class="project-desc">Ecosistema completo de 3 plataformas: aplicación de escritorio para administración, web interna para meseros y cocineros (toma de pedidos y lista de platos en tiempo real), y app móvil para clientes pensionados.</p>
+                    <div class="project-tags">
+                        <span>C#</span><span>WPF</span><span>Web</span><span>Android</span><span>SQL Server</span>
+                    </div>
+                </div>
+
+                <!-- Democracia Digital -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-landmark"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/KlausJung011" title="Ver repositorio" class="proj-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Sistema de Democracia Digital & Lotocracia</h3>
+                    <p class="project-desc">Plataforma de CivicTech para recopilar, analizar y comprender la opinión de grupos masivos en tiempo real. Basada en Pol.is (código abierto), implementa lotocracia y visualización de consensos y divisiones de opinión.</p>
+                    <div class="project-tags">
+                        <span>CivicTech</span><span>Pol.is</span><span>Análisis de Datos</span><span>Democracia Digital</span>
+                    </div>
+                </div>
+
+                <!-- Web de Música y Arte Digital -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-music"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/KlausJung011" title="Ver repositorio" class="proj-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Web de Música & Arte Digital</h3>
+                    <p class="project-desc">Mi primer proyecto de desarrollo web. Exploré un diseño de interfaces más artístico, creativo e inusual — alejado de los estándares convencionales. Una experiencia visual atractiva que mezcla música y arte digital.</p>
+                    <div class="project-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Primer proyecto</span>
+                    </div>
+                </div>
+
+                <!-- Sistema de Gestión de Inmuebles -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-house-chimney"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/KlausJung011" title="Ver repositorio" class="proj-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Sistema de Gestión de Inmuebles</h3>
+                    <p class="project-desc">Plataforma para la venta, alquiler y anticrético de terrenos, casas y departamentos. Incluye panel administrativo web, sitio público para compradores/arrendatarios, y app móvil para asesores inmobiliarios en visitas guiadas.</p>
+                    <div class="project-tags">
+                        <span>Web Admin</span><span>Web Pública</span><span>App Móvil</span><span>Inmobiliaria</span>
+                    </div>
+                </div>
+
+                <!-- Web Agencias de Turismo -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-plane-departure"></i></div>
+                        <div class="project-links">
+                            <a href="#" title="Ver repositorio" class="proj-link"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-status idea"><i class="fas fa-lightbulb"></i> En idea</div>
+                    <h3 class="project-title">Plataforma Web de Agencias de Turismo</h3>
+                    <p class="project-desc">Plataforma digital para agencias de turismo que permita gestionar paquetes, reservas, itinerarios y clientes. Orientada al turismo nacional e internacional con experiencia de usuario moderna.</p>
+                    <div class="project-tags">
+                        <span>Concepto</span><span>Turismo</span><span>Por definir</span>
+                    </div>
+                </div>
+
+                <!-- Portafolio Personal -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="fas fa-user-tie"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/KlausJung011" title="Ver repositorio" class="proj-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Ver demo" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Portafolio Personal</h3>
+                    <p class="project-desc">Este mismo portafolio. Diseño glassmorphism con tema oscuro, bordes con gradientes animados, barras de progreso, animaciones por scroll y fuentes personalizadas. 100% HTML, CSS y JS vanilla.</p>
+                    <div class="project-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════ FOOTER ══════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-name gradient-text">Nicolás Arturo Vargas Silva</p>
+            <p class="footer-sub">Diseñado & desarrollado con <i class="fas fa-heart" style="color:#FF8437"></i> — 2025</p>
+            <div class="footer-links">
+                <a href="https://github.com/KlausJung011" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nicol%C3%A1s-arturo-vargas-silva-749306187" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/klausjung.011" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </div>
+    </footer>
 
     <script src="index.js"></script>
 </body>
