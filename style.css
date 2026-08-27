@@ -534,7 +534,7 @@ h2.section-title {
    ═══════════════════════════════════════════════ */
 .interests-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
 }
 
@@ -767,7 +767,7 @@ h2.section-title {
    ═══════════════════════════════════════════════ */
 .soft-skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
 }
 
@@ -1243,6 +1243,34 @@ h2.section-title {
     .nav-inner { padding: 8px 12px; }
     .nav-link { padding: 6px 10px; font-size: 0.76rem; }
     .projects-grid { grid-template-columns: 1fr; }
-    .interests-grid { grid-template-columns: 1fr 1fr; }
-    .soft-skills-grid { grid-template-columns: 1fr 1fr; }
+    .section { padding: 24px 16px; }
+
+    /* Tarjetas de interés y habilidades blandas más compactas en móvil */
+    .interest-card,
+    .soft-skill-card {
+        padding: 18px 14px;
+    }
+    .interest-icon,
+    .soft-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+    .interest-card h3,
+    .soft-skill-card h3 { font-size: 0.88rem; }
+    .interest-card p,
+    .soft-skill-card p { font-size: 0.78rem; }
+}
+
+/* Pantallas muy pequeñas: columna única para grids de tarjetas */
+@media (max-width: 400px) {
+    .interests-grid,
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    h1.name { font-size: 1.7rem; }
+    .header-inner { padding: 24px 16px; }
 }
